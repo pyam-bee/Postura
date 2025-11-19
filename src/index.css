@@ -48,3 +48,11 @@
     --font-lemonmilk: 'lemonmilk', sans-serif;
     --font-family-chromeslab: 'chromeslab', 'Georgia', serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    scroll-behavior: smooth;
+}
