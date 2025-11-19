@@ -1,0 +1,67 @@
+/* Custom Swiper Styles for a proper look */
+.postura-swiper .swiper-slide {
+    /* Apply the custom curve to ALL Swiper transitions */
+    transition: transform 1400ms cubic-bezier(1, 0.01, 0.15, 1.01) !important;
+}
+
+/* Override default Swiper transition to use the custom curve */
+.postura-swiper .swiper-wrapper {
+    /* The transition property here controls the main slide movement */
+    transition-timing-function: cubic-bezier(1, 0.01, 0.15, 1.01) !important;
+}
+
+/* Fix for the pagination dots position */
+.postura-swiper .swiper-pagination-bullet {
+    background: #747474;
+    /* Darker grey */
+    opacity: 0.4;
+    /* Keep them subtle */
+    /* Apply the custom transition function */
+    transition-timing-function: cubic-bezier(1, 0.01, 0.15, 1.01) !important;
+
+    /* Ensure the transition property covers what Swiper changes (opacity, transform, width) */
+    transition: all 1400ms cubic-bezier(1, 0.01, 0.15, 1.01) !important;
+}
+
+/* 2. Target the active (center) bullet transition */
+.postura-swiper .swiper-pagination-bullet-active {
+    /* Reinforce the curve for the active state change */
+    background: #585858 !important;
+    /* Very dark grey/near black */
+    opacity: 1;
+    transition-timing-function: cubic-bezier(1, 0.01, 0.15, 1.01) !important;
+}
+
+/* 3. Target the dynamic bullets (those that scale) */
+/* Swiper uses these classes to scale bullets near the active one */
+.postura-swiper .swiper-pagination-bullet-active-main,
+.postura-swiper .swiper-pagination-bullet-active-prev,
+.postura-swiper .swiper-pagination-bullet-active-prev-prev,
+.postura-swiper .swiper-pagination-bullet-active-next,
+.postura-swiper .swiper-pagination-bullet-active-next-next {
+    /* Ensure all dynamic scaling uses your curve */
+    transition-timing-function: cubic-bezier(1, 0.01, 0.15, 1.01) !important;
+    transition-duration: 1400ms !important;
+}
+
+/* Base styles for navigation arrows - making them proper arrows */
+.postura-swiper .swiper-button-prev,
+.postura-swiper .swiper-button-next {
+    color: #000;
+    background: none;
+    transition: all 0.3s ease;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+}
+
+/* Positioning adjustments */
+.postura-swiper .swiper-button-prev {
+    left: 20px;
+}
+
+.postura-swiper .swiper-button-next {
+    right: 20px;
+}

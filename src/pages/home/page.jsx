@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
+import PosturaOriginal from "../../components/posturaOriginal/PosturaOriginal.jsx";
 
 const Home = () => {
-
   {/* Posters Cards */}
   const bestSellerProducts = [
-    { src: "/src/assets/posters/Ducati 1199.png", title: "Ducati 1199", alt: "bestSeller1"},
-    { src: "/src/assets/posters/Porsche 911 GT3 RS.png", title: "Porsche 911 GT3 RS", alt: "bestSeller2"},
-    { src: "/src/assets/posters/CR7.png", title: "Cr7", alt: "bestSeller3"},
-    { src: "/src/assets/posters/Airplane Sky Minimal.png", title: "Airplane Sky Minimal", alt: "bestSeller4"},
-    { src: "/src/assets/posters/Bloom.png", title: "Bloom", alt: "bestSeller5"},
-    { src: "/src/assets/posters/Sunflower Japanese Spitz.png", title: "Sunflower Japanese Spitz", alt: "bestSeller6"},
-    { src: "/src/assets/posters/Computer.png", title: "Computer", alt: "bestSeller7"},
-    { src: "/src/assets/posters/Primitive Music.png", title: "Primitive Music", alt: "bestSeller8"},
+    { src: "/assets/posters/best sellers/Ducati 1199.png", title: "Ducati 1199", alt: "bestSeller1"},
+    { src: "/assets/posters/best sellers/Porsche 911 GT3 RS.png", title: "Porsche 911 GT3 RS", alt: "bestSeller2"},
+    { src: "/assets/posters/best sellers/CR7.png", title: "Cr7", alt: "bestSeller3"},
+    { src: "/assets/posters/best sellers/Airplane Sky Minimal.png", title: "Airplane Sky Minimal", alt: "bestSeller4"},
+    { src: "/assets/posters/best sellers/Bloom.png", title: "Bloom", alt: "bestSeller5"},
+    { src: "/assets/posters/best sellers/Sunflower Japanese Spitz.png", title: "Sunflower Japanese Spitz", alt: "bestSeller6"},
+    { src: "/assets/posters/best sellers/Computer.png", title: "Computer", alt: "bestSeller7"},
+    { src: "/assets/posters/best sellers/Primitive Music.png", title: "Primitive Music", alt: "bestSeller8"},
   ]
 
   const containerVariants = {
@@ -59,7 +59,7 @@ const Home = () => {
       <div className="w-full min-h-screen">
         {/* Banner */}
         <div className="border-b">
-          <img className="w-full" src="/src/assets/sale/banner.png" alt="banner" />
+          <img className="w-full" src="/assets/sale/banner.png" alt="banner" />
         </div>
 
         {/* Heading */}
@@ -109,6 +109,15 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* Postura Originals */}
+        {/* Image Slider */}
+        <PosturaOriginal />
+        <style>
+          .smooth-scrol{`
+            scroll-behaviour: smooth;
+          `}
+        </style>
       </div>
   )
 }
