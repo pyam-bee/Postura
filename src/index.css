@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+    @font-face {
+        font-family: 'helvetica-light';
+        src: url('/fonts/HelveticaNeueLight.otf') format("opentype");
+    }
+
+    @font-face {
+        font-family: 'helvetica-medium';
+        src: url('/fonts/HelveticaNeueMedium.otf') format("opentype");
+    }
+
+    @font-face {
+        font-family: 'helvetica-thin';
+        src: url('/fonts/HelveticaNeueThin.otf') format("opentype");
+    }
+
+    @font-face {
+        font-family: 'lemonmilk';
+        src: url('/fonts/LEMONMILK-Regular.otf') format("opentype");
+    }
+
+    @font-face {
+        font-family: 'chromeslab';
+        src: url('/fonts/chromeslab.ttf') format("truetype");
+    }
+}
+
+@theme {
+    --font-helvetica-light: 'helvetica-light', sans-serif;
+    --font-helvetica-medium: 'helvetica-medium', sans-serif;
+    --font-helvetica-thin: 'helvetica-thin', sans-serif;
+    --font-lemonmilk: 'lemonmilk', sans-serif;
+    --font-family-chromeslab: 'chromeslab', 'Georgia', serif;
+}
