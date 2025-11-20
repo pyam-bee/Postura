@@ -58,8 +58,15 @@ const Home = () => {
   return (
       <div className="w-full min-h-screen">
         {/* Banner */}
-        <div className="border-b">
+        <div className="border-b relative">
           <img className="w-full" src="/assets/sale/banner.png" alt="banner" />
+
+          <img 
+            className="absolute top-[30%] right-[10%] w-[200px] h-auto pointer-events-none"
+            src="/assets/cursor-unscreen.gif" 
+            alt="cursor animation"
+          />
+
         </div>
 
         {/* Heading */}
