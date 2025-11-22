@@ -8,7 +8,8 @@ const generatePrints = () => {
   return Array.from({ length: 40 }, (_, i) => ({
     id: i + 1,
     src: `/assets/posters/prints/print-${i + 1}.png`,
-    alt: `print-${i + 1}`
+    alt: `print-${i + 1}`,
+    title: `Print ${i + 1}`
   }));
 };
 
@@ -125,7 +126,7 @@ const PrintsGallery = () => {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-1 font-helvetica-medium">
             <button
               onClick={() => goToPage(currentPage - 1)}
               disabled={currentPage === 1}
@@ -141,9 +142,9 @@ const PrintsGallery = () => {
                 <button
                   key={page}
                   onClick={() => goToPage(page)}
-                  className={`px-4 py-2 rounded ${
+                  className={`px-3 py-1 rounded ${
                     currentPage === page
-                      ? 'bg-gray-400 text-white'
+                      ? 'bg-gray-200 text-black focus:ring-0'
                       : 'hover:bg-gray-200'
                   }`}
                 >
@@ -155,9 +156,9 @@ const PrintsGallery = () => {
             <button
               onClick={() => goToPage(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="p-2 rounded hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-2 rounded disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="text-black w-5 h-5" />
             </button>
           </div>
         )}
@@ -184,7 +185,7 @@ const PrintsGallery = () => {
               <img 
                 src={selectedPrint.src} 
                 alt={selectedPrint.alt}
-                className="w-[490px] h-[700px] object-cover rounded p-3"
+                className="w-[490px] h-[700px] object-contain rounded p-3"
               />
               
               <div className="flex flex-col justify-between items-start flex-1">
@@ -222,7 +223,9 @@ const PrintsGallery = () => {
                       Scan this QR code or DM us the screenshot 🤍
                     </p>
                     
-                    <img src={Insta} className='w-[40px] h-[40px]'/>
+                    <a href="https://www.instagram.com/postura_studios" target="_blank" rel="noopener noreferrer">
+                      <img src={Insta} className='w-[40px] h-[40px]'/>
+                    </a>
                     <img src={Whatsapp} className='w-[38px] h-[38px]'/>
                     <img src={Tiktok} className='w-[38px] h-[38px]'/>
                   </div>
